@@ -2,6 +2,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 import { api } from '../../services/api.js';
 
 import {
@@ -11,11 +12,13 @@ import {
   LeftContainer,
   RightContainer,
   Title,
+  Link,
 } from './styles.js';
 import { Button } from '../../components/Button/index.jsx';
 import Logo from '../../assets/logo.svg';
 
 export function Register() {
+  const navigate = useNavigate();
   const schema = yup
     .object({
       name: yup.string().required('Nome é Obrigatório'),
@@ -46,19 +49,29 @@ export function Register() {
   console.log(errors);
 
   const onSubmit = async (data) => {
-    const response = await toast.promise(
-      api.post('/users', {
-        name: data.name,
-        email: data.email,
-        password: data.password,
-      }),
-      {
-        pending: 'Verificando seus dados',
-        success: 'Cadastro efetuado com Sucesso! 👌',
-        error: 'Ops, Algo deu errado! Tente Novamente 🤯',
-      },
-    );
-    console.log(response);
+    try {
+      const { status } = await api.post(
+        '/users',
+        {
+          name: data.name,
+          email: data.email,
+          password: data.password,
+        },
+        { validateStatus: () => true },
+      );
+      if (status === 201 || status === 200) {
+        setTimeout(() => {
+          navigate('/login');
+        }, 2000);
+        toast.success('Cadastro criado com sucesso!');
+      } else if (status === 409) {
+        toast.error('Email já cadastrado');
+      } else {
+        throw new Error();
+      }
+    } catch (error) {
+      toast.error('Falha no sistema!');
+    }
   };
 
   return (
@@ -93,7 +106,7 @@ export function Register() {
           <Button type="submit">Criar Conta</Button>
         </Form>
         <p>
-          Já possui conta? <a href="">Clique aqui.</a>
+          Já possui conta? <Link to="/login">Clique aqui.</Link>
         </p>
       </RightContainer>
     </Container>

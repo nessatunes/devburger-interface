@@ -1386,6 +1386,7 @@ __metadata:
     react: ^18.3.1
     react-dom: ^18.3.1
     react-hook-form: ^7.53.0
+    react-multi-carousel: ^2.8.5
     react-router-dom: ^6.26.1
     react-toastify: ^10.0.5
     styled-components: ^6.1.12
@@ -3258,6 +3259,13 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
+  languageName: node
+  linkType: hard
+
+"react-multi-carousel@npm:^2.8.5":
+  version: 2.8.5
+  resolution: "react-multi-carousel@npm:2.8.5"
+  checksum: aa41112c4ab548570d0c65f9f30cddb1219d1ca7f9e43022a4f7c5fcb394e66028df3bd1a6a907282720ca7b83aeda8c7101fda300f8a32e959ef1cdc11a3db9
   languageName: node
   linkType: hard
 
