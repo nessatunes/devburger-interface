@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { api } from '../../services/api.js';
-import { Container, ContainerItems, Title } from './styles.js';
+import { Container, Title } from './styles.js';
+import { CardProduct } from '../CardProduct/index.jsx';
 
 export function OffersCarousel() {
   const [offers, setOffers] = useState([]);
@@ -47,9 +48,7 @@ export function OffersCarousel() {
         itemClass="carousel-item"
       >
         {offers.map((product) => (
-          <ContainerItems key={product.id} imageUrl={product.url}>
-            <p>{product.name}</p>
-          </ContainerItems>
+          <CardProduct key={product.id} product={product} />
         ))}
       </Carousel>
     </Container>

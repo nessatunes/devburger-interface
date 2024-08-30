@@ -25,7 +25,3 @@ export const Container = styled.div`
     ),
     url('${Background}');
 `;
-
-export const Content = styled.div`
-  padding-bottom: 70px;
-`;

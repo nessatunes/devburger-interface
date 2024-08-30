@@ -9,10 +9,10 @@ export function Home() {
         <h1>Seja Bem Vindo!</h1>
       </Banner>
       <Container>
-        <Content>
+        <div>
           <CategoriesCarousel />
           <OffersCarousel />
-        </Content>
+        </div>
       </Container>
     </main>
   );
