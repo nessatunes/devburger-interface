@@ -5,6 +5,7 @@ import {
   CategoryMenu,
   ProductsContainer,
   CategoryButton,
+  BackButton,
 } from './styles';
 import { api } from '../../services/api';
 import { formatPrice } from '../../utils/formatPrice';
@@ -97,6 +98,15 @@ export function Menu() {
             <CardProduct product={product} key={product.id} />
           ))}
         </ProductsContainer>
+        <BackButton
+          onClick={() => {
+            navigate({
+              pathname: '/',
+            });
+          }}
+        >
+          Voltar
+        </BackButton>
       </Container>
     </main>
   );
