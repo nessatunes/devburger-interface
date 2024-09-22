@@ -22,8 +22,6 @@ export default function Header() {
     logout();
     navigate('/login');
   }
-  console.log(userInfo);
-
   return (
     <Container>
       <Content>
