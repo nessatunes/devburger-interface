@@ -749,6 +749,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stripe/react-stripe-js@npm:^2.8.1":
+  version: 2.8.1
+  resolution: "@stripe/react-stripe-js@npm:2.8.1"
+  dependencies:
+    prop-types: ^15.7.2
+  peerDependencies:
+    "@stripe/stripe-js": ^1.44.1 || ^2.0.0 || ^3.0.0 || ^4.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 02151e498df1373c6fd56bd9d68c50e2cb5b6b1caf9d4e2257306a8973fed313974a0e63edcccf610ef420069b18ed5fe657547446fd11ac3ec3e0dbe7b75d0c
+  languageName: node
+  linkType: hard
+
+"@stripe/stripe-js@npm:^4.9.0":
+  version: 4.9.0
+  resolution: "@stripe/stripe-js@npm:4.9.0"
+  checksum: a3de4546ebbe9a97c5019a000f9a491695e35ac422ab34859b6b50072434fda2bcf872fbcf094b3594a742d037b18d265f3aea372ede19359f75e188ac05bf5a
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.20.5":
   version: 7.20.5
   resolution: "@types/babel__core@npm:7.20.5"
@@ -1380,6 +1400,8 @@ __metadata:
     "@eslint/js": ^9.9.0
     "@hookform/resolvers": ^3.9.0
     "@phosphor-icons/react": ^2.1.7
+    "@stripe/react-stripe-js": ^2.8.1
+    "@stripe/stripe-js": ^4.9.0
     "@types/react": ^18.3.3
     "@types/react-dom": ^18.3.0
     "@vitejs/plugin-react": ^4.3.1
@@ -3206,7 +3228,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
