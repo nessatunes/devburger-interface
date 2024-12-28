@@ -13,7 +13,7 @@ export function CardProduct({ product }) {
         <p>{product.name}</p>
         <strong>{product.currencyValue}</strong>
       </div>
-      <CartButton onClick={() => putProductInCart(product)}></CartButton>
+      <CartButton onClick={() => putProductInCart(product)} />
     </Container>
   );
 }

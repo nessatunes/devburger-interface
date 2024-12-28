@@ -54,8 +54,12 @@ export function Login() {
         success: {
           render() {
             setTimeout(() => {
-              navigate('/');
-            }, 2000);
+              if (userData.admin) {
+                navigate('/pedidos');
+              } else {
+                navigate('/');
+              }
+            }, 1000);
             return 'Seja bem vindo(a) 👌';
           },
         },

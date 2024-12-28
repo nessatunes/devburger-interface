@@ -4,7 +4,7 @@ import Background from '../../assets/background.svg';
 
 export const Container = styled.div`
   width: 100%;
-  background-color: #f0f0f0;
+  background-color: ${props => props.theme.secondWhite};
   background: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
@@ -33,7 +33,7 @@ export const Title = styled.div`
   font-size: 32px;
   font-weight: 800;
   padding-bottom: 12px;
-  color: #61a120;
+  color: ${props => props.theme.green};
   text-align: center;
   position: relative;
 
@@ -45,9 +45,8 @@ export const Title = styled.div`
 
     width: 56px;
     height: 4px;
-    background-color: #61a120;
-  }
-`;
+    background-color: ${props => props.theme.green};
+  }`;
 
 export const Content = styled.div`
   display: grid;
