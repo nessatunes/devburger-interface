@@ -1,5 +1,9 @@
-import { Container } from './styles';
+// import { Container } from './styles';
 
-export function Admin() {
-  return <Container>Admin</Container>;
+export function EditProduct() {
+  return (
+    <div>
+      <h1>Editar Produto</h1>
+    </div>
+  );
 }

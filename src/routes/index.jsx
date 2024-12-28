@@ -11,6 +11,10 @@ import {
   Admin,
 } from '../containers';
 import { UserLayout } from '../layouts/UserLayout';
+import { Orders } from '../containers/Admin/Orders';
+import { NewProducts } from '../containers/Admin/NewProduct';
+import { EditProduct } from '../containers/Admin/EditProduct';
+import { Products } from '../containers/Admin/Products';
 
 export function Router() {
   return (
@@ -24,8 +28,11 @@ export function Router() {
         <Route path="/pedidos" element={<Admin />} />
       </Route>
 
-      <Route path="/admin" element={<Admin />}>
-        <Route path="/admin/home" element={<Admin />} />
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route path="/admin/pedidos" element={<Orders />} />
+        <Route path="/admin/novo-produto" element={<NewProducts />} />
+        <Route path="/admin/editar-produto" element={<EditProduct />} />
+        <Route path="/admin/produtos" element={<Products />} />
       </Route>
 
       <Route path="/login" element={<Login />} />

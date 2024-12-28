@@ -54,8 +54,8 @@ export function Login() {
         success: {
           render() {
             setTimeout(() => {
-              if (userData.admin) {
-                navigate('/pedidos');
+              if (userData?.admin) {
+                navigate('/admin/pedidos');
               } else {
                 navigate('/');
               }
