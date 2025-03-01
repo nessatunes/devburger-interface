@@ -8,13 +8,13 @@ import {
   Register,
   Checkout,
   CompletePayment,
-  Admin,
+  Orders,
+  NewProducts,
+  EditProduct,
+  Products,
 } from '../containers';
 import { UserLayout } from '../layouts/UserLayout';
-import { Orders } from '../containers/Admin/Orders';
-import { NewProducts } from '../containers/Admin/NewProduct';
-import { EditProduct } from '../containers/Admin/EditProduct';
-import { Products } from '../containers/Admin/Products';
+import { AdminLayout } from '../layouts/AdminLayout';
 
 export function Router() {
   return (
@@ -25,7 +25,6 @@ export function Router() {
         <Route path="/carrinho" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/complete" element={<CompletePayment />} />
-        <Route path="/pedidos" element={<Admin />} />
       </Route>
 
       <Route path="/admin" element={<AdminLayout />}>
